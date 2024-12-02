@@ -57,7 +57,9 @@ This repository contains simulation projects completed as coursework for a wirel
 
 ## **Scripts Used**  
 - `firstT1.sh`: Bash script for automating data rate testing in Task One.  
-- `pyfirst1.py`: Python script for parsing results, calculating metrics, and generating graphs.  
+- `pyfirst1.py`: Python script for parsing results, calculating metrics, and generating graphs.
+- `firstT2.sh`: Bash script for automating data rate testing in Task Two.
+- `pyfirst2.py`: Python script for parsing results, calculating metrics, and generating graphs for Task Two.
 
 ---
 
