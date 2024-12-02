@@ -1,10 +1,68 @@
-# NS3 Simulation Projects: Performance Analysis of Point-to-Point Topologies
+# NS3 Simulation Projects: Performance Analysis of Point-to-Point Topologies  
 
-# Tasks
-1. **TASK ONE**: The first task involved modifying certain parameters of a point-to-point topology in the first.cc file of Network Simulator 3 to analyze the network's performance under different conditions. The parameters that were modified included the propagation delay, packet transmission interval, maximum number of packets, and data rate.
-To evaluate the system's performance, the propagation delay was set to 1ms, the packet transmission interval to 0.5s, and the maximum number of packets to 200. The default data rate of 5Mbps was changed to an array of different data rates, including 1Mbps, 5Mbps, 10Mbps, 15Mbps, 20Mbps, and 25Mbps. A shell script was used to run the data rates in a loop and store the results obtained in a trace file allocated to each data rate (see firstT1.sh). An additional python script was written to retrieve the relevant information from the trace files and calculate the system's throughput and end-to-end delay for each data rate (see pyfirst1.py). After the data was collected, the python script was used to plot graphs for both throughput and end-to-end delay versus data rate. 
-As no packets were dropped in the simulation, the throughput maintained a constant rate of 160bps for every data rate in the throughput vs data rate graph. In contrast, a significant variation in delay was observed in the end-to-end delay vs data rate graph. At a data rate of 1Mbps, the highest delay of 0.009413333333333027s was recorded, while a sharp decline in delay to 0.002695555555555994s was observed after the data rate was increased to 5Mbps. A steady decline in delay was observed for the remaining data rates, with the delay dropping to 0.0018177777777773014s for 10Mbps, 0.001582222222221979s for 15Mbps, and 0.001408888888889089s for 20Mbps data rates respectively, and to 0.0013177777777781212s for 25Mbps. In conclusion, the simulation revealed that an increase in data rate can significantly enhance network performance by reducing the delay experienced in receiving data. In conclusion, the simulation revealed that an increase in data rate can significantly enhance network performance by reducing the delay experienced in receiving data.
+This repository contains simulation projects completed as coursework for a wireless system design class. The goal was to analyze network performance under various conditions using NS3.  
 
-2. **TASK TWO**: Task two involved creating a point-to-point topology for four nodes, with node 0 as the source and node 3 as the destination, using similar parameters to the first task. A shell script and a Python script were used to create a loop for testing the different data rates, calculating the system's throughput and end-to-end delay for each rate. The results showed that, unlike the first task where the system maintained a constant throughput of 160bps for all data rates, the system in the second task exhibited a higher throughput of 320Mbps for all data rates.
-Additionally, the second task experienced higher end-to-end delays for each data rate than the first task, which could be attributed to the increase in the number of nodes. For instance, a data rate of 1Mbps had an end-to-end delay of 0.047182222222222236s, which is significantly higher than the 0.009413333333333027s delay observed in the first task for the same data rate. The delay sharply reduced to 0.013413333333333622s for 5Mbps, and steadily reduced to 0.009208888888888723s for 10Mbps, 0.0078044444444441575s for 15Mbps, 0.007104444444444604s for 20Mbps, and 0.006695555555555405s for 25Mbps. 
-The image e2edelay_t1vt2 shows the end-to-end delay vs data rate in task one compared to task two. It demonstrates the superior performance of task one with two nodes in comparison with the second task with four nodes transmitting from node 0 to node 3. The image throughput1v2 also shows a throughput vs data rate graph of task one compared with task two. As stated earlier, due to the fact that packets are not dropped, the throughput remains constant in both tasks. However, due to the number of nodes being doubled in task two, it is reflected in the throughput figure being twice that of task one. In summary, the simulation reveals that an increase in the number of nodes in a point-to-point topology could adversely affect system performance in terms of end-to-end delay.
+---
+
+## **Tasks Overview**  
+
+### **Task One**:  
+- **Objective**: Analyze the performance of a two-node point-to-point topology by varying parameters.  
+- **Modified Parameters**:  
+  - Propagation Delay: 1ms  
+  - Packet Transmission Interval: 0.5s  
+  - Maximum Packets: 200  
+  - Data Rates: 1Mbps, 5Mbps, 10Mbps, 15Mbps, 20Mbps, 25Mbps  
+- **Results**:  
+  - **Throughput**: Constant at 160bps across all data rates.  
+  - **End-to-End Delay**: Reduced significantly as the data rate increased.  
+
+#### **Graphs for Task One**  
+![Task One: Throughput & e2edelay vs Data Rate](./first1results.png)  
+*Throughput remains constant across all data rates and e2edelay reduces as datarate increases.*  
+
+---
+
+### **Task Two**:  
+- **Objective**: Extend the topology to four nodes and analyze the impact on performance.  
+- **Configuration**:  
+  - Source: Node 0  
+  - Destination: Node 3  
+  - Same parameters as Task One.  
+- **Results**:  
+  - **Throughput**: Constant at 320bps for all data rates.  
+  - **End-to-End Delay**: Increased due to the additional nodes.  
+
+#### **Graphs for Task Two**  
+![Task Two: Throughput & e2edelay vs Data Rate](./first2results.png)  
+*Higher throughput and delay compared to Task One due to doubled node count.*   
+
+---
+
+## **Comparison Between Tasks**  
+![Comparison: Throughput](./throughput1v2.png)  
+*Task Two shows double throughput compared to Task One.*  
+
+![Comparison: End-to-End Delay](./e2edelay_t1vt2.png)  
+*Task Two experiences higher delays due to increased node count.*  
+
+---
+
+## **Key Insights**  
+1. Higher data rates significantly reduce end-to-end delay in both tasks.  
+2. Increasing the number of nodes negatively impacts system performance, leading to higher delays.  
+3. Throughput remains constant as no packet drops occur during the simulation.  
+
+---
+
+## **Scripts Used**  
+- `firstT1.sh`: Bash script for automating data rate testing in Task One.  
+- `pyfirst1.py`: Python script for parsing results, calculating metrics, and generating graphs.  
+
+---
+
+## **How to Run**  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Coldsummers/cwt1-2.git
+   cd cwt1-2
