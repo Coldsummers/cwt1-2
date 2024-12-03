@@ -18,7 +18,7 @@ This repository contains simulation projects completed as coursework for a wirel
   - **End-to-End Delay**: Reduced significantly as the data rate increased.  
 
 #### **Graphs for Task One**  
-![Task One: Throughput & e2edelay vs Data Rate](./first1results.png)  
+![Task One: Throughput & e2edelay vs Data Rate](./images/first1results.png)  
 *Throughput remains constant across all data rates and e2edelay reduces as datarate increases.*  
 
 ---
@@ -34,16 +34,16 @@ This repository contains simulation projects completed as coursework for a wirel
   - **End-to-End Delay**: Increased due to the additional nodes.  
 
 #### **Graphs for Task Two**  
-![Task Two: Throughput & e2edelay vs Data Rate](./first2results.png)  
+![Task Two: Throughput & e2edelay vs Data Rate](./images/first2results.png)  
 *Higher throughput and delay compared to Task One due to doubled node count.*   
 
 ---
 
 ## **Comparison Between Tasks**  
-![Comparison: Throughput](./throughput1v2.png)  
+![Comparison: Throughput](./images/throughput1v2.png)  
 *Task Two shows double throughput compared to Task One.*  
 
-![Comparison: End-to-End Delay](./e2edelay_t1vt2.png)  
+![Comparison: End-to-End Delay](./images/e2edelay_t1vt2.png)  
 *Task Two experiences higher delays due to increased node count.*  
 
 ---
