@@ -55,11 +55,17 @@ This repository contains simulation projects completed as coursework for a wirel
 
 ---
 
+## **Prerequisites**  
+- Network Simulator 3 (NS3): Ensure NS3 is installed and configured.  
+- Required Python Libraries: Run `pip install matplotlib` for plotting.  
+
+---
+
 ## **Scripts Used**  
 - `firstT1.sh`: Bash script for automating data rate testing in Task One.  
-- `pyfirst1.py`: Python script for parsing results, calculating metrics, and generating graphs.
-- `firstT2.sh`: Bash script for automating data rate testing in Task Two.
-- `pyfirst2.py`: Python script for parsing results, calculating metrics, and generating graphs for Task Two.
+- `pyfirst1.py`: Python script for parsing results, calculating metrics, and generating graphs.  
+- `firstT2.sh`: Bash script for automating data rate testing in Task Two.  
+- `pyfirst2.py`: Python script for parsing results, calculating metrics, and generating graphs for Task Two.  
 
 ---
 
@@ -68,3 +74,19 @@ This repository contains simulation projects completed as coursework for a wirel
    ```bash
    git clone https://github.com/Coldsummers/cwt1-2.git
    cd cwt1-2
+   ```  
+2. Grant execution permissions to run shell scripts:  
+   ```bash
+   chmod +x firstT1.sh
+   chmod +x firstT2.sh
+   ```  
+3. Run the shell scripts to execute the simulation:  
+   ```bash
+   ./firstT1.sh
+   ./firstT2.sh
+   ```  
+
+---
+
+## **License**  
+This project is licensed under the MIT License.
